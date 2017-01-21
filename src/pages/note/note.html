@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{mode}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-lines>
+
+  <ion-item>
+    <ion-label stacked>Description</ion-label>
+    <ion-textarea [(ngModel)]="note.description"></ion-textarea>
+  </ion-item>
+	
+    <ion-datetime style="pointer-events:none;" displayFormat="MMM DD, YYYY" [(ngModel)]="note.date"></ion-datetime>
+  
+
+    <button ion-button full padding (click)='updatenote()'>{{mode}}</button>
+
+  </ion-list>
+</ion-content>

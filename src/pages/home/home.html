@@ -1,0 +1,22 @@
+
+<ion-content padding style="background: url(img/jGX25XsSUel8Ng4iF5Oh_sky3.jpg) no-repeat center;background-size:cover;">
+ <img src="img/gi1lyBCxQxaTJpv8rS28_good.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+ <button ion-button (click)="addnote()" id="page-button1" style="font-size:13px;" class="button button-energized  button-block">Write something good that happened today!</button>
+    <ion-list *ngFor="let note of notes" inset>
+      <ion-item-sliding *ngIf="!note.completed">
+        <ion-item (click)="editnote(note)">
+          <h2>{{note.date}}</h2>
+          <p>{{note.description}}</p>
+        </ion-item>
+        <ion-item-options side="right">
+
+          <button ion-button (click)="deletenote(note)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+</ion-content>
+
+
